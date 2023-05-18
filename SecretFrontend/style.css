@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .left {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .right {
+    flex: 1;
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  p {
+    margin-top: 5px;
+  }
+
+  form textarea,
+  form input[type="text"],
+  form input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  
+  form label {
+    display: inline-block;
+    margin-top: 10px;
+    vertical-align: middle;
+  }
+  
+  form select,
+  form button {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 5px;
+  }
+  
+  form button {
+    margin-left: 10px;
+  }
+  
+  
+  
+  #secret-result {
+    margin-top: 20px;
+  }
+  
+  #secret-info {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Secret Sharing Website</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Secret Sharing Website</h1>
+    <h2>This is an API of a secret service.
+    You can save your secret by using the API.
+    You can restrict the access of a secret after the certen number of views or after a certen period of time.
+    </h2>
+<div class="container">
+    <div class="left">
+      <h2>Share Secret</h2>
+      <form id="secret-form">
+        <label for="secret-text">Secret Text:</label>
+        <textarea id="secret-text" rows="4" cols="50" placeholder="Enter your secret message"></textarea>
+        <p>This text will be saved as a secret</p>
+
+        <label for="expire-views">Expire After Views:</label>
+        <input type="number" id="expire-views" min="1" placeholder="Enter the maximum number of views">
+        <p>The secret won't be available after the given number of views. It must be greater than 0.</p>
+
+        <label for="expire-time">Expire After Time (minutes):</label>
+        <input type="number" id="expire-time" min="0" placeholder="Enter the expiration time in minutes">
+        <p>The secret won't be available after the given time. The value is provided in minutes. 0 means never expires.</p>
+
+        <label for="response-format">Response Format:</label>
+        <select id="response-format">
+          <option value="json">JSON</option>
+          <option value="xml">XML</option>
+          <!-- Add more format options here -->
+        </select>
+      
+        <button type="submit">Share Secret</button>
+      </form>
+    </div>
+
+    <div class="right">
+      <h2>Retrieve Secret</h2>
+      <form id="retrieve-form">
+        <label for="secret-hash">Secret Hash:</label>
+        <input type="text" id="secret-hash" placeholder="Enter the secret hash">
+        <p>Unique hash to identify the secret</p>
+
+        <label for="response-format-retrieve">Response Format:</label>
+        <select id="response-format-retrieve">
+          <option value="json">JSON</option>
+          <option value="xml">XML</option>
+          <!-- Add more format options here -->
+        </select>
+      
+        <button type="submit">Retrieve Secret</button>
+      </form>
+      <div id="secret-result" class="hidden">
+        <h2>Shared Secret:</h2>
+        <div id="secret-info"></div>
+      </div>
+    </div>
+</div>
+
+<script src="sendSecret.js"></script>
+<script src="reciveSecret.js"></script>
+</body>
+</html>
